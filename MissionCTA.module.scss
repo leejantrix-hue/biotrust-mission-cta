@@ -1,0 +1,140 @@
+// Color Variables
+$pink-magenta: #E91E63;
+$text-dark: #1a1a2e;
+$text-light: #ffffff;
+$bg-light: #ffffff;
+$bg-soft: #f8f9fa;
+
+// Container
+.missionCTA {
+  width: 100%;
+  background-color: $bg-light;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// Two-column layout
+.grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+// Image column
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}
+
+// Text column
+.textColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+// Pill Badge
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $pink-magenta;
+  color: $text-light;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  width: fit-content;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: $text-light;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+// Heading
+.heading {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $text-dark;
+  margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+// Description / Paragraph
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: lighten($text-dark, 20%);
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+// Button / CTA
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $pink-magenta;
+  color: $text-light;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+
+  &:hover {
+    background-color: darken($pink-magenta, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
